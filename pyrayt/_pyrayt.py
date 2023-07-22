@@ -183,7 +183,7 @@ class _RayTraceDataframe(object):
             columns=self.df_columns,
         )
 
-        self.data = self.data.append(new_frame, ignore_index=True)
+        self.data = pd.concat([self.data, new_frame], ignore_index=True)
 
 
 class RayTracer(object):
